@@ -12,7 +12,7 @@
             <thead>
                 <tr>
                     <th>Nom</th>
-                    <th>Prenom</th>
+                    <th>Prénom</th>
                     <th>Téléphone</th>
 					<th></th>
                     <th></th>
