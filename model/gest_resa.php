@@ -19,7 +19,7 @@ include '../model/connexion_sql.php';
 
 $bd->exec("UPDATE reservation SET statut=" . $valeur . " WHERE id_resa=" . $id);
 
-if($valeur=2)
+if($valeur==2)
 {
 $bd->exec("UPDATE offre SET nbplace=(nbplace - 1) WHERE id_offre=" . $id_offre);
 }

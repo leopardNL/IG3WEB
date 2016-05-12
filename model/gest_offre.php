@@ -28,8 +28,17 @@ function ajout_resa($id_offre, $idenfant)
 {
 include '../model/connexion_sql.php';
 
-$bd->exec("INSERT INTO reservation(id_offre, idenfant) VALUES (".$id_offre.",".$idenfant.")");
+$req = $bd->prepare('SELECT * FROM reservation WHERE id_offre = :id AND idenfant = :enf');
+$req->execute(array(
+    'id' => $id_offre,
+	'enf' => $idenfant));
 
+$resultat = $req->fetch();
+
+if (!$resultat)
+{	
+$bd->exec("INSERT INTO reservation(id_offre, idenfant) VALUES (".$id_offre.",".$idenfant.")");
+}
 header('Location: ../controller/demande.php');
 }
 
