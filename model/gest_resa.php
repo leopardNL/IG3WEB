@@ -21,7 +21,7 @@ $bd->exec("UPDATE reservation SET statut=" . $valeur . " WHERE id_resa=" . $id);
 
 if($valeur=2)
 {
-$bd->exec("UPDATE offre SET nbplace=(nplace - 1) WHERE id_offre=" . $id_offre);
+$bd->exec("UPDATE offre SET nbplace=(nbplace - 1) WHERE id_offre=" . $id_offre);
 }
 
 
