@@ -7,6 +7,12 @@ $enfant = info_enfant($_COOKIE['identifiant']);
 
 include '../view/header_user.php';
 
+?>
+<br>
+</br>
+<?php
+
+
 foreach ($enfant as $value) {?>
 			<form action="../controller/add_reserver.php" method='post'>
 				<input type="hidden" name="id" value="<?php echo $_POST['id'] ;?>"/>

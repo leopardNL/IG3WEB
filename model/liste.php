@@ -50,7 +50,7 @@ function enfant($id, $prenom, $nom)
 include '../model/connexion_sql.php';
 
 $bd->exec("INSERT INTO enfant(id_parent, nom_enfant, prenom_enfant) VALUES 
-(".$id.", '".$prenom."', '".$nom."')");
+(".$id.", '".$nom."', '".$prenom."')");
 
 header('Location: ../controller/liste.php');
 }

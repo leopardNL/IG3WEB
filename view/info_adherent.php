@@ -28,10 +28,10 @@ $i = $value['id']; ?>
 			<form class="navbar-form navbar-middle" action="../controller/adherent.php" method="post">
 					<div class="form-group">
 						<input type="hidden" name="id" value="<?php echo $i; ?>"/>
-						<input name="prenom" type="text" class="form-control">
+						<input name="prenom" type="text" placeholder="prenom" class="form-control">
 					</div>
 					<div class="form-group">
-						<input name="nom" type="text" class="form-control">
+						<input name="nom" type="text" placeholder="nom" class="form-control">
 					</div>
 					<button type="submit" name="ajouter" class="btn btn-success">Ajouter</button>
 			</form>

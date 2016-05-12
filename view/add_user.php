@@ -9,37 +9,38 @@
                         <div class="form-group">
                             <label for="civilite" class="col-sm-2 control-label">Civilit&eacute; :</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" name="civilite" id="civilite">
+								<input type="radio" name="civilite" checked="checked" value="HOMME"> Monsieur<br>
+								<input type="radio" name="civilite" value="FEMME"> Madame<br>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="nom" class="col-sm-2 control-label">Nom :</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" name="nom" id="nom">
+                                <input type="text" class="form-control" name="nom" id="nom" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="prenom" class="col-sm-2 control-label">Prenom :</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" name="prenom" id="prenom">
+                                <input type="text" class="form-control" name="prenom" id="prenom" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="mail" class="col-sm-2 control-label">Email :</label>
                             <div class="col-sm-8">
-                                <input type="email" class="form-control" name="email" id="email">
+                                <input type="email" class="form-control" name="email" id="email" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="tel" class="col-sm-2 control-label">T&eacute;l&eacute;phone :</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" name="tel" id="tel">
+                                <input type="number" class="form-control" name="tel" id="tel">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="mobile" class="col-sm-2 control-label">Mobile :</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" name="mobile" id="mobile">
+                                <input type="number" class="form-control" name="mobile" id="mobile">
                             </div>
                         </div>					
                         <div class="form-group">
