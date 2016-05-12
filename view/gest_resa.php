@@ -20,6 +20,7 @@
                 <tr>
 					<form action="../controller/traiter_demande.php" method='post'>
 					<input type="hidden" name="id" value="<?php echo $value['id_resa']; ?>"/>
+					<input type="hidden" name="id_offre" value="<?php echo $value['id_offre']; ?>"/>
 					<td> <?php echo $value['id_resa'] ;?> </td>
                     <td> <?php echo $value['date_dispo'] ;?> </td>
                     <td> <?php echo $value['prenom_enfant'] . " " . $value['nom_enfant'];?> </td>
@@ -28,8 +29,12 @@
 							elseif($value['statut'] == 1) {echo "Refusé";}
 							else {echo "Validé";}		
 						?> </td>
+					<?php 
+					if($value['statut'] != 2)
+					{ ?>
 					<th><button type="submit" name="valide" class="btn btn-xs btn-info">Valider</button></td>
-                    <td><button type="submit" name="refuse" class="btn btn-xs btn-danger">Refuser</button></td>
+                    <td><button type="submit" name="refuse" class="btn btn-xs btn-danger">Refuser</button></td>";
+					<?php } ?>
                     </form>
                 </tr>
 

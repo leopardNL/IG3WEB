@@ -14,9 +14,10 @@ return $tab;
 
 function delete($id)
 {
-echo 'delete';
-echo $id;
+include '../model/connexion_sql.php';
 
+$bd->exec("DELETE FROM adherent WHERE id=".$id);
+header('Location: ../controller/liste.php');
 }
 
 function edit($id)

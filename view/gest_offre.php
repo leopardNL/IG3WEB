@@ -22,7 +22,7 @@
 					<td> <?php echo $value['id_offre'];?> </td>
                     <td> <?php echo $value['date_dispo'];?> </td>
                     <td> <?php echo $value['nbplace'];?> </td>
-					<th><input name="nbplace" type="number" class="form-control"></td>
+					<th><input name="nbplace" type="number" class="form-control" required></td>
                     <td><button type="submit" name="modifier" class="btn btn-xs btn-danger">Modifier</button></td>
                     </form>
                 </tr>

@@ -13,10 +13,10 @@
 	
 		<form class="navbar-form navbar-right" action="controller/connexion.php" method="post">
 				<div class="form-group">
-				  <input name="mail" type="mail" placeholder="exemple@gmail.com" class="form-control">
+				  <input name="mail" type="mail" placeholder="exemple@gmail.com" class="form-control" required>
 				</div>
 				<div class="form-group">
-				  <input name="password" type="password" placeholder="Mot de passe" class="form-control">
+				  <input name="password" type="password" placeholder="Mot de passe" class="form-control" required>
 				</div>
 				<button type="submit" class="btn btn-success">Connexion</button>
 		</form>
