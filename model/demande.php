@@ -13,21 +13,9 @@ return $tab;
 }
 
 
-function supp_demande($id_resa, $id_offre)
+function supp_demande($id_resa)
 {
 include '../model/connexion_sql.php';
-$resultat = $bd->query("SELECT statut from reservation where id_resa=".$id_resa);
-$tab = $resultat->fetchAll();
 
 $bd->exec("DELETE FROM reservation WHERE id_resa=".$id_resa);
-
-
-foreach($tab as $value)
-{
-	if($value['statut']==2)
-	{
-		$bd->exec("UPDATE offre SET nbplace=(nbplace + 1) WHERE id_offre=" . $id_offre);
-	}
-}
-
 }

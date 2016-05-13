@@ -1,6 +1,13 @@
 <div class="page-header">
     <h1> Gestion des articles</h1>
 </div>
+
+<div class="row">
+<p>
+<a href="../controller/traiter_actu.php"> <button type="button" class="btn btn-lg btn-success col-lg-6">Ajouter</button> </a>
+</p>
+</div>
+
 <div class="row">
     <div class="col-md-6">
         <table class="table table-striped">

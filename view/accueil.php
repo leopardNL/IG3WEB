@@ -8,8 +8,8 @@
 
 <?php foreach($tab as $value){ ?>
 <div class="jumbotron">
-  <h1><?php echo $value['titre_actu']; ?></h1>
-  <p><?php echo $value['contenu'] . " - ". $value['date_actu']; ?></p>
+  <h1><?php echo "  " .  $value['titre_actu']; ?></h1>
+  <p><?php echo $value['contenu'] . " --- ". $value['date_actu']; ?></p>
 </div>
 <?php } ?>
 

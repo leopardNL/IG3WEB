@@ -18,7 +18,6 @@
                 <tr>
 					<form action="../controller/supp_demande.php" method='post'>
 					<input type="hidden" name="id_resa" value="<?php echo $value['id_resa'] ;?>"/>
-					<input type="hidden" name="id_offre" value="<?php echo $value['id_offre'] ;?>"/>
 					<td> <?php echo $value['id_offre'] ;?> </td>
                     <td> <?php echo $value['date_dispo'] ;?> </td>
                     <td> <?php echo $value['prenom_enfant'] ;?> </td>

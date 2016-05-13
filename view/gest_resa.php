@@ -30,7 +30,7 @@
 							else {echo "Validé";}		
 						?> </td>
 					<?php 
-					if($value['statut'] != 2)
+					if($value['statut'] == 0)
 					{ ?>
 					<th><button type="submit" name="valide" class="btn btn-xs btn-info">Valider</button></td>
                     <td><button type="submit" name="refuse" class="btn btn-xs btn-danger">Refuser</button></td>";

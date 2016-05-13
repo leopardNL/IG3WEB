@@ -21,7 +21,8 @@
                 </tr>
             </thead>
             <tbody>
-				<?php foreach($tab as $value){ ?>
+				<?php foreach($tab as $value){ 
+				if($value['statut'] == 1) { ?>
                 <tr>
 					<form action="../controller/adherent.php" method='post'>
 					<input type="hidden" name="id" value="<?php echo $value['id']; ?>"/>
@@ -34,7 +35,7 @@
                     </form>
                 </tr>
 
-				<?php } ?>
+				<?php } } ?>
             </tbody>
         </table>
     </div>
