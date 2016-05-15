@@ -1,7 +1,7 @@
 <?php
 
 
-function liste_demande()
+function liste_demande() //recupère la liste des demandes renseignés par le nom des enfants
 {
 include '../model/connexion_sql.php';
 
@@ -12,14 +12,14 @@ $tab = $resultat->fetchAll();
 return $tab;
 }
 
-function modifier_demande($id, $valeur, $id_offre)
+function modifier_demande($id, $valeur, $id_offre) //change le statut de la demande 'valide' ou 'refuse'
 {
 include '../model/connexion_sql.php';
 
 
 $bd->exec("UPDATE reservation SET statut=" . $valeur . " WHERE id_resa=" . $id);
 
-if($valeur==2)
+if($valeur==2) //si la demande est validée, on retire une place disponible
 {
 $bd->exec("UPDATE offre SET nbplace=(nbplace - 1) WHERE id_offre=" . $id_offre);
 }

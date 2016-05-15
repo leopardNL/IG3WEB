@@ -7,11 +7,11 @@ require_once '../model/connexion.php';
 $id = login($_POST['mail'], $_POST['password']);
 
 
-if($id == 0)
+if($id == 0) //0 si aucun resultat
 {
 
 }
-else
+else //sinon on initialise les cookies
 {
 setCookie('identifiant',$id["id"],time()+3600, null, null, false, true);
 setCookie('statut', $id["statut"],time()+3600, null, null, false, true);

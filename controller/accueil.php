@@ -1,5 +1,5 @@
 <?php
-if ($_COOKIE['statut'] == 1)
+if ($_COOKIE['statut'] == 1) //si l'utilisateur est un adhérent simple
 {
 
 	require_once '../model/gest_actu.php';
@@ -9,7 +9,7 @@ if ($_COOKIE['statut'] == 1)
 
 	
 }
-elseif(($_COOKIE['statut'] == 2) AND ($_COOKIE['uuid'] == '5736fc96b9' ))
+elseif(($_COOKIE['statut'] == 2) AND ($_COOKIE['uuid'] == '5736fc96b9' )) //si user est admin
 {
 	require_once '../model/gest_actu.php';
 	$tab = liste_article();

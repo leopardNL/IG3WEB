@@ -1,7 +1,7 @@
 <?php
 
 
-function liste_demande($id_parent)
+function liste_demande($id_parent) //récupère la liste des demandes
 {
 include '../model/connexion_sql.php';
 
@@ -13,7 +13,7 @@ return $tab;
 }
 
 
-function supp_demande($id_resa)
+function supp_demande($id_resa) //supprime une demande
 {
 include '../model/connexion_sql.php';
 

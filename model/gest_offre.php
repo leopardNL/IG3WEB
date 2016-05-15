@@ -1,7 +1,7 @@
 <?php
 
 
-function liste_offre()
+function liste_offre() //recupère la liste des offres
 {
 include '../model/connexion_sql.php';
 
@@ -11,14 +11,14 @@ $tab = $resultat->fetchAll();
 return $tab;
 }
 
-function ajouter_offre()
+function ajouter_offre() //ajoute un joue supplémentaire : le trigger s'occupe de la date
 {
 include '../model/connexion_sql.php';
 $bd->exec("INSERT INTO offre(nbplace) VALUES (0)");
 header('Location: ../controller/gest_offre.php');
 }
 
-function modifier_offre($id, $valeur)
+function modifier_offre($id, $valeur) //modifie le nombre de place
 {
 include '../model/connexion_sql.php';
 
@@ -31,7 +31,7 @@ $bd->exec("UPDATE offre SET nbplace=" . $valeur . " WHERE id_offre=" . $id);
 header('Location: ../controller/gest_offre.php');
 }
 
-function ajout_resa($id_offre, $idenfant)
+function ajout_resa($id_offre, $idenfant) //ajoute une réservation
 {
 include '../model/connexion_sql.php';
 
@@ -49,7 +49,7 @@ $bd->exec("INSERT INTO reservation(id_offre, idenfant) VALUES (".$id_offre.",".$
 header('Location: ../controller/demande.php');
 }
 
-function autorisation($id, $uuid)
+function autorisation($id, $uuid) //test si un utilisateur malveillant n'a pas modifié son cookie
 {
 include '../model/connexion_sql.php';
 

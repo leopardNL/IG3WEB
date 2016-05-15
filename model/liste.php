@@ -1,7 +1,7 @@
 <?php
 
 
-function adherent()
+function adherent() //récupère la liste des adhérent
 {
 include '../model/connexion_sql.php';
 
@@ -12,7 +12,7 @@ return $tab;
 
 }
 
-function delete($id)
+function delete($id) //supprime l'adhérent donné en paramètre
 {
 include '../model/connexion_sql.php';
 
@@ -20,13 +20,8 @@ $bd->exec("DELETE FROM adherent WHERE id=".$id);
 header('Location: ../controller/liste.php');
 }
 
-function edit($id)
-{
-echo 'edit';
-echo $id;
-}
 
-function info($id)
+function info($id) //récupère les informations de l'adhérent passé en paramètre
 {
 include '../model/connexion_sql.php';
 
@@ -36,17 +31,8 @@ $tab = $resultat->fetchAll();
 return $tab;
 }
 
-function info_enfant($id, $uuid)
-{
-include '../model/connexion_sql.php';
 
-
-$resultat = $bd->query("SELECT * FROM enfant e, adherent a where e.id_parent=" . $id . " AND a.id=e.id_parent AND a.uuid='" . $uuid . "'");
-$tab = $resultat->fetchAll();
-return $tab;
-}
-
-function info_enfant2($id)
+function info_enfant2($id) //récupère la liste des enfants de l'adhérent passé en paramètre
 {
 include '../model/connexion_sql.php';
 
@@ -56,7 +42,7 @@ $tab = $resultat->fetchAll();
 return $tab;
 }
 
-function enfant($id, $prenom, $nom)
+function enfant($id, $prenom, $nom) //ajoute un enfant à l'adhérent passé en paramètre
 {
 include '../model/connexion_sql.php';
 

@@ -1,12 +1,13 @@
 <?php
 
-
+//création d'un adherent/utilisateur
 function ajout($civ, $prenom, $nom, $mail, $fix, $mobile, $adresse, $codepost, $ville, $pays)
 {
 include '../model/connexion_sql.php';
 
 // Hachage du mot de passe
 $pass_hache = sha1(mb_strtolower($prenom) . "." . mb_strtolower($nom));
+//génère un uuid
 $uuid = uniqid();
 
 $bd->exec("INSERT INTO adherent(uuid, sexe, nom, prenom, mail, fix, mobile, adresse, codepost, ville, pays, password) VALUES 
@@ -15,7 +16,7 @@ $bd->exec("INSERT INTO adherent(uuid, sexe, nom, prenom, mail, fix, mobile, adre
 header('Location: ../controller/liste.php');
 }
 
-function mail_exist($mail)
+function mail_exist($mail) //verifie si le mail existe deja dans la BD
 {
 include '../model/connexion_sql.php';
 $req = $bd->prepare('SELECT id FROM adherent WHERE mail = :mail');
@@ -34,7 +35,7 @@ else
 }
 }
 
-function modifier_mdp($id, $mdp)
+function modifier_mdp($id, $mdp) //modification du mot de passe
 {
 include '../model/connexion_sql.php';
 

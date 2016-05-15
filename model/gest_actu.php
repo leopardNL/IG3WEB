@@ -1,7 +1,7 @@
 <?php
 
 
-function liste_article()
+function liste_article() //recupère la liste des articles
 {
 include '../model/connexion_sql.php';
 
@@ -11,7 +11,7 @@ $tab = $resultat->fetchAll();
 return $tab;
 }
 
-function supp_article($id, $valeur)
+function supp_article($id, $valeur) //supprime un article
 {
 include '../model/connexion_sql.php';
 
@@ -20,7 +20,7 @@ $bd->exec("DELETE FROM actualite WHERE id_actu=".$id);
 header('Location: ../controller/gest_actu.php');
 }
 
-function add_article($titre, $contenu)
+function add_article($titre, $contenu) //ajoute un article
 {
 include '../model/connexion_sql.php';
 

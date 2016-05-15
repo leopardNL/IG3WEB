@@ -1,5 +1,7 @@
 <?php
-if ($_COOKIE['statut'] == 1)
+require_once '../model/gest_offre.php';
+
+if(autorisation($_COOKIE['identifiant'], $_COOKIE['uuid'])) //si couple id-uuid est correcte
 {
 	require_once '../model/reserver.php';
 	$tab = place_dispo();

@@ -1,5 +1,5 @@
 <?php
-if(($_COOKIE['statut'] == 2) AND ($_COOKIE['uuid'] == '5736fc96b9' ))
+if(($_COOKIE['statut'] == 2) AND ($_COOKIE['uuid'] == '5736fc96b9' )) //si admin
 {
 	require_once '../model/liste.php';
 	$tab = adherent();

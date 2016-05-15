@@ -1,7 +1,7 @@
 <?php
 require_once '../model/gest_offre.php';
 
-if(autorisation($_COOKIE['identifiant'], $_COOKIE['uuid']))
+if(autorisation($_COOKIE['identifiant'], $_COOKIE['uuid'])) //si admin
 {
 
 	if ($_COOKIE['statut'] == 1)

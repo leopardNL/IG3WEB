@@ -1,7 +1,7 @@
 <?php
 
 
-function login($mail, $pass)
+function login($mail, $pass) //fonction de connexion
 {
 include '../model/connexion_sql.php';
 

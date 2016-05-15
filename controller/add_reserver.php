@@ -1,11 +1,11 @@
 <?php
 require_once '../model/gest_offre.php';
 
-if(autorisation($_COOKIE['identifiant'], $_COOKIE['uuid']))
+if(autorisation($_COOKIE['identifiant'], $_COOKIE['uuid'])) //verifie le couple id - uuid
 {
 
 
-		if (isset($_POST['reserver'])) {
+		if (isset($_POST['reserver'])) { //si il a cliqué sur reserver on l'envoie sur le choix de l'enfant
 		require_once '../model/liste.php';	
 		$enfant = info_enfant2($_COOKIE['identifiant']); 
 
@@ -28,7 +28,7 @@ if(autorisation($_COOKIE['identifiant'], $_COOKIE['uuid']))
 
 
 		}
-		elseif (isset($_POST['reserver2'])) {
+		elseif (isset($_POST['reserver2'])) { //si il a cliqué sur reserver après avoir choisi l'enfant
 
 		ajout_resa($_POST['id'], $_POST['enfant']);
 
