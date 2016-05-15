@@ -15,6 +15,7 @@ else
 {
 setCookie('identifiant',$id["id"],time()+3600, null, null, false, true);
 setCookie('statut', $id["statut"],time()+3600, null, null, false, true);
+setCookie('uuid', $id["uuid"],time()+3600, null, null, false, true);
 
 header('Location: ../controller/accueil.php');
 }

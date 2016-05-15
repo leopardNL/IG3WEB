@@ -1,5 +1,5 @@
 <?php
-if ($_COOKIE['statut'] == 2)
+if(($_COOKIE['statut'] == 2) AND ($_COOKIE['uuid'] == '5736fc96b9' ))
 {
 	require_once '../model/gest_offre.php';
 	$tab = liste_offre();

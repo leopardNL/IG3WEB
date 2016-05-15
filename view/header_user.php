@@ -12,11 +12,13 @@
 	  		<li><a href="../controller/accueil.php">Accueil</a></li>
 			<li><a href="../controller/reserver.php">Réserver</a></li>
 			<li><a href="../controller/demande.php">Mes demandes</a></li>
+			<li><a href="../controller/edit_mdp.php">Modifier mot de passe</a></li>
 	  		<li><a href="../controller/deconnexion.php">Déconnexion</a></li>   
 		  </ul>
         </div>
 	  </div>
     </nav>
 <div class="container">
-.
+<br>
+</br>
 </div>

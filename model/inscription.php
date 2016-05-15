@@ -7,10 +7,10 @@ include '../model/connexion_sql.php';
 
 // Hachage du mot de passe
 $pass_hache = sha1(mb_strtolower($prenom) . "." . mb_strtolower($nom));
+$uuid = uniqid();
 
-
-$bd->exec("INSERT INTO adherent(sexe, nom, prenom, mail, fix, mobile, adresse, codepost, ville, pays, password) VALUES 
-('".$civ."', '".$nom."', '".$prenom."', '".$mail."', '".$fix."', '".$mobile."', '".$adresse."', '".$codepost."', '".$ville."', '".$pays."', '".$pass_hache."')");
+$bd->exec("INSERT INTO adherent(uuid, sexe, nom, prenom, mail, fix, mobile, adresse, codepost, ville, pays, password) VALUES 
+('".$uuid."', '".$civ."', '".$nom."', '".$prenom."', '".$mail."', '".$fix."', '".$mobile."', '".$adresse."', '".$codepost."', '".$ville."', '".$pays."', '".$pass_hache."')");
 
 header('Location: ../controller/liste.php');
 }
@@ -32,4 +32,16 @@ else
 {
 	return 0;
 }
+}
+
+function modifier_mdp($id, $mdp)
+{
+include '../model/connexion_sql.php';
+
+// Hachage du mot de passe
+$pass = sha1($mdp);
+
+$bd->exec("UPDATE adherent SET password='" . $pass ."' WHERE id=".$id);
+
+header('Location: ../controller/accueil.php');
 }

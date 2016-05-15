@@ -9,7 +9,7 @@ if ($_COOKIE['statut'] == 1)
 
 	
 }
-elseif ($_COOKIE['statut'] == 2)
+elseif(($_COOKIE['statut'] == 2) AND ($_COOKIE['uuid'] == '5736fc96b9' ))
 {
 	require_once '../model/gest_actu.php';
 	$tab = liste_article();

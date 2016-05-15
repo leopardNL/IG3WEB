@@ -15,7 +15,7 @@
                         <div class="form-group">
 							<label for="nom" class="col-sm-2 control-label">Contenu :</label>
 							<div class="col-sm-8">
-								<input type="text" class="form-control" name="contenu" id="contenu" maxlength="230" required>
+								<input type="text" class="form-control" name="contenu" id="contenu" maxlength="500" required>
 							</div>
 						</div>
 						

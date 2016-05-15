@@ -1,6 +1,9 @@
 <?php
 require_once '../model/gest_resa.php';
 
+if(($_COOKIE['statut'] == 2) AND ($_COOKIE['uuid'] == '5736fc96b9' ))
+{
+
 if (isset($_POST['valide'])) {
  
 	modifier_demande($_POST['id'], 2, $_POST['id_offre']);
@@ -13,5 +16,6 @@ if (isset($_POST['valide'])) {
  
     echo "comment es-tu venu sur cette page ?";
  
+}
 }
 ?>

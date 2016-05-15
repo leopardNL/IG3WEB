@@ -28,8 +28,11 @@
                 </tr>
 
 				<?php } ?>
-            </tbody>
+			</tbody>
         </table>
     </div>
+	<form action="../controller/traiter_offre.php" method='post'>
+	<button type="submit" name="ajouter" class="btn btn-lg btn-primary">Ajouter un jour supplémentaire</button>
+	</form>
 </div>
 </div>

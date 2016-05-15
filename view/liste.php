@@ -30,7 +30,6 @@
                     <td> <?php echo $value['prenom'] ;?> </td>
                     <td> <?php echo $value['mobile'] ;?> </td>
 					<th><button type="submit" name="info" class="btn btn-xs btn-info">Info</button></td>
-                    <td><button type="submit" name="edit" class="btn btn-xs btn-warning">Modifier</button></td>
                     <td><button type="submit" name="delete" class="btn btn-xs btn-danger">Supprimer</button></td>
                     </form>
                 </tr>

@@ -36,12 +36,22 @@ $tab = $resultat->fetchAll();
 return $tab;
 }
 
-function info_enfant($id)
+function info_enfant($id, $uuid)
 {
 include '../model/connexion_sql.php';
 
 
-$resultat = $bd->query("SELECT * FROM enfant where id_parent=" . $id);
+$resultat = $bd->query("SELECT * FROM enfant e, adherent a where e.id_parent=" . $id . " AND a.id=e.id_parent AND a.uuid='" . $uuid . "'");
+$tab = $resultat->fetchAll();
+return $tab;
+}
+
+function info_enfant2($id)
+{
+include '../model/connexion_sql.php';
+
+
+$resultat = $bd->query("SELECT * FROM enfant where id_parent=" . $id); 
 $tab = $resultat->fetchAll();
 return $tab;
 }
